@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./providers";
-import Navbar from "@/components/Navbar";
+import Header from "@/components/Header";
 
 const poppins = Poppins({ weight: "400", subsets: ["latin"] });
 
@@ -20,8 +20,8 @@ export default function RootLayout({
     <html lang="pt-BR" className={poppins.className} suppressHydrationWarning>
       <body>
         <Providers>
-          <Navbar />
-          {children}
+          <Header />
+          <main>{children}</main>
         </Providers>
       </body>
     </html>
